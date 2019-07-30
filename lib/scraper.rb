@@ -34,10 +34,10 @@ class Scraper
         hash[:linkedin] = social_url
       elsif social_url.include? "github"
         hash[:github] = social_url
-      elsif social_url.include? "youtube"
-        hash[:youtube] = social_url
-      elsif social_url.include? "facebook"
-        hash[:facebook] = social_url
+      # elsif social_url.include? "youtube"
+      #   hash[:youtube] = social_url
+      # elsif social_url.include? "facebook"
+      #   hash[:facebook] = social_url
       else
         hash[:blog] = social_url
       end
@@ -45,7 +45,7 @@ class Scraper
     hash[:profile_quote] = profile_page.css('div.profile-quote').text
     hash[:bio] = profile_page.css('div.description-holder p').text
     # binding.pry
-    hash 
+    hash
     # linkedin_url = profile_page.css()
   end
 
