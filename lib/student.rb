@@ -11,10 +11,11 @@ class Student
 
   def self.create_from_collection(students_array)
     students_array.each do |student|
-      binding.pry 
-      student = Student.new
-      student.each {|key, value| student.send(("#{key}="), value)}
-      @@all << student
+      # binding.pry 
+      new_student = Student.new(student)
+      # student = Student.new
+      # student.each {|key, value| student.send(("#{key}="), value)}
+      @@all << new_student
     end
     #{:name => "Abby Smith", :location => "Brooklyn, NY", :profile_url => "url"}
   end
