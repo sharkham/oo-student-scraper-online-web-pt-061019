@@ -10,9 +10,8 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    student = Student.new
     students_array.each do |student|
-      binding.pry 
+      student = Student.new
       student.each {|key, value| student.send(("#{key}="), value)}
       @@all << student
     end
