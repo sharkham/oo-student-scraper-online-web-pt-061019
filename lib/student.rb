@@ -14,6 +14,7 @@ class Student
     students_array.each do |student|
       student.each {|key, value| student.send(("#{key}="), value)}
       @@all << student
+      binding.pry
     end
     #{:name => "Abby Smith", :location => "Brooklyn, NY", :profile_url => "url"}
   end
