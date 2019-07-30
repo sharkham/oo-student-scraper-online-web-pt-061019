@@ -10,7 +10,11 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    students_array.each {|student| student = Student.new}
+    student = Student.new
+    students_array.each do |student_mini_hash|
+      student_mini_hash.each {|key, value| student.send(("#{key}="), value)}
+    end 
+    #{:name => "Abby Smith", :location => "Brooklyn, NY", :profile_url => "url"}
   end
 
   def add_student_attributes(attributes_hash)
