@@ -13,7 +13,9 @@ class Student
     student = Student.new
     students_array.each do |student_mini_hash|
       student_mini_hash.each {|key, value| student.send(("#{key}="), value)}
-    end 
+    end
+    @@all << student
+    student 
     #{:name => "Abby Smith", :location => "Brooklyn, NY", :profile_url => "url"}
   end
 
